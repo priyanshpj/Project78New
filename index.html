@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>My family</h1>
+    <p>Here are the 5 members.</p>
+    <img id="image1" class="img-responsive" src="p1.jpg">
+    <p id="para1">Priyansh Jhunjhunwala(Me)</p>
+    <button type="button" id="button1" onclick="next()">Next</button>
+    <script>
+        var i=0;
+        var images=["p1.jpg", "m1.jpg", "p.jpg", "m2.jpg", "b.jpg"]
+        var namess=["Priyansh Jhunjhunwala(Me)", "Rashi Jhunjhunwala", "Priyavrat Jhunjhunwala", "Madhushri Jhunjhunwala", "Vijay Jhunjhunwala"];
+        function next(){
+            i++;
+            if(i>4){
+                i=0;
+            }
+            document.getElementById("image1").src=images[i];
+            document.getElementById("para1").innerHTML=namess[i];
+        }
+    </script>
+</body>
+</html>
